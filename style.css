@@ -3,6 +3,8 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
 
 header{
@@ -24,6 +26,7 @@ form{
     background-color: #c8d6e5;
     padding: 24px 0px;
     text-align: center;
+    display: none;
 }
 
 form h2{
@@ -45,4 +48,39 @@ button{
 
 #cancelButton{
     background-color: red;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li{
+    max-width: 25%;
+    position: relative;
+    max-height: 245px;
+    overflow-y: hidden;
+}
+
+ul li img{
+    width: 100%;
+}
+
+.overlayImage{
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+.overlayImage a{
+    color: #FFF;
+}
+
+ul li:hover .overlayImage{
+    opacity: 1;
+    transition: all 0.5s ease;
 }
